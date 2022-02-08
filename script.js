@@ -58,6 +58,7 @@ function clicked(){
 // OverLay
 // let detailBtn = document.getElementById('detail');
 let detailBtn = document.querySelector('#listItems');
+let content = document.querySelector('.container')
 console.log(detailBtn)
 let overdiv = document.querySelector('#overlay');
 let closeBtn = overdiv.querySelector('.close');
@@ -70,12 +71,14 @@ function showContent(e){
     if (e.target.classList.contains('show')){
         let reqdNumber = parseInt(e.target.parentElement.querySelector('h3').innerHTML[5]);
         paraHidden.innerHTML = backup[reqdNumber-1]
-        console.log(paraHidden);
+        content.style.display = 'none';
         overdiv.style.height='100vh';
         closeBtn.style.display='block';
+
     }
 }
 function hideContent(){
+    content.style.display = '';
     overdiv.style.height='0vh';
     closeBtn.style.display='none';
 }

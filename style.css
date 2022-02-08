@@ -12,7 +12,10 @@
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #eee;
-  overflow: hidden;
+  /* overflow: hidden; */
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 .container {
   display: flex;
@@ -73,6 +76,7 @@ ul {
   list-style-type: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  overflow-y: scroll;
 }
 .listitem {
   border-radius: 10px;
@@ -126,6 +130,7 @@ ul {
 
 /* Overlay */
 #overlay {
+  z-index: 10;
   width: 100vw;
   height: 0;
   background-color: rgba(0, 0, 0, 0.5);
