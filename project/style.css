@@ -1,0 +1,161 @@
+/* Importing Font Family */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #eee;
+  overflow: hidden;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Input Field */
+.inputdiv {
+  text-align: center;
+}
+.inputdiv h2 {
+  color: green;
+}
+.inputdiv p {
+  font-weight: 900;
+}
+.inputField {
+  width: 80vw;
+  display: flex;
+  padding: 1rem;
+}
+.inputField textarea {
+  font-size: 1.1rem;
+  margin: 0 1rem;
+  padding: 0.3rem;
+  width: 100%;
+  height: 6rem;
+  resize: none;
+}
+button {
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px grey;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  background-color: green;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 0.8rem;
+}
+button:hover {
+  background-color: rgb(3, 168, 3);
+  transition: 0.4s ease;
+}
+
+/* List */
+
+#list {
+  margin: 1rem;
+  width: 80%;
+}
+ul {
+  padding: 1rem;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.listitem {
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px;
+  padding: 1rem;
+  margin: 1rem;
+}
+.listitem p {
+  margin-top: 0.3rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+.blue-btn {
+  background-color: rgb(20, 93, 250);
+}
+.blue-btn:hover {
+  background-color: rgb(0, 81, 255);
+  transition: 0.4s ease;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 100vw;
+  }
+  .inputdiv {
+    width: 100%;
+  }
+  .inputField {
+    gap: 0.4rem;
+    width: 90vw;
+    flex-direction: column;
+  }
+  #list {
+    margin: 1rem;
+    width: 100%;
+  }
+  ul {
+    padding: 0.2rem;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .listitem {
+    width: 90vw;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px;
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+}
+
+/* Overlay */
+#overlay {
+  width: 100vw;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.4s;
+  overflow: hidden;
+}
+.close {
+  border: none;
+  outline: none;
+  background-color: rgba(243, 8, 8, 0.842);
+  position: absolute;
+  right: 10px;
+  display: none;
+}
+.close:hover {
+  background-color: red;
+}
+
+.textShowing {
+  width: 100vw;
+  height: 100vh;
+  color: #000;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.textShowing p {
+  background-color: #fff;
+  width: 90vw;
+  overflow-wrap: break-word;
+  height: auto;
+}

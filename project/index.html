@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" async></script>
+    <title>Note Taker</title>
+  </head>
+  <body>
+    <div id="overlay">
+        <div class="containerr">
+        <button class="close">X</button>
+        <div class="textShowing">
+            <p id="noteContent">The overflow- </p>
+        </div>
+        </div>
+    </div>
+    <div class="container">
+      <h1>Note Taker</h1>
+      <div class="inputdiv">
+        <h2>Add A New Note:</h3>
+        <div class="inputField">
+          <p>Note:</p>
+          <textarea
+            name="write your name here"
+            id="inputField"
+            placeholder="Write Your note here"
+          ></textarea>
+        </div>
+        <button id="addNote">Add Note</button>
+      </div>
+      <div id="list">
+        <ul id="listItems">
+          
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
